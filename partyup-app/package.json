@@ -1,0 +1,39 @@
+{
+  "name": "partyup-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "es6-promise": "^4.2.5",
+    "moment": "^2.22.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-file-base64": "^1.0.3",
+    "react-loading": "^2.0.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "mocha src/logic.spec.js",
+    "debug-test": "mocha debug src/logic.spec.js",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^6.2.0",
+    "isomorphic-fetch": "^2.2.1",
+    "partyup-data": "file:../partyup-data",
+    "sessionstorage": "^0.1.0"
+  }
+}

@@ -1,0 +1,24 @@
+.publicProfile { background-color: #f6f7f8a1 }
+
+.publicProfile__information { margin-top: 10% }
+
+.information__text { display: flex; flex-direction: column; align-items: center; border-right: 2px solid black; }
+
+.information__picture { display: flex; flex-direction: column; align-items: center; }
+
+.partyup__header--info { display: -webkit-box; display: -ms-flexbox; display: flex; border-right: 2px solid black; }
+
+.partyups { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+.partyups__titles { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-pack: distribute; justify-content: space-around; background-color: rgb(0,40,255, 0.4);}
+
+.partyups__container { display: flex; width: 100%; }
+
+.container__list { display: flex; align-items: center;  width: 100%; flex-direction: column; justify-content: space-around; padding: 2% 0%; }
+
+.profile__avatar { width: 150px; height: 150px; border: 2px solid black; border-radius: 10px; }
+
+@media (min-width: 1080px) { 
+    .container__list { display: flex; flex-wrap: wrap; align-items: center;  width: 100%; flex-direction: row; justify-content: space-around; padding: 2% 50px; }
+    .partyups__picture { display:flex; flex-direction: row; width: 100%; height: 100%; min-width: 280px; min-height: 280px; max-width: 280px; max-height: 280px; }
+}

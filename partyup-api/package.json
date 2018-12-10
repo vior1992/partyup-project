@@ -1,0 +1,32 @@
+{
+  "name": "partyup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "cloudinary": "^1.13.2",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mocha": "^5.2.0",
+    "moment": "^2.22.2",
+    "nodemon": "^1.18.6"
+  },
+  "devDependencies": {
+    "nyc": "^13.1.0",
+    "partyup-data": "file:../partyup-data"
+  },
+  "scripts": {
+    "test": "mocha logic",
+    "start": "node .",
+    "watch": "nodemon .",
+    "debug": "node debug .",
+    "debug-test": "mocha debug logic/index.spec.js",
+    "coverage" : "nyc mocha logic/index.spec.js",
+    "coverage-report": "nyc report --reporter=html"
+  },
+  "author": "",
+  "license": "ISC"
+}

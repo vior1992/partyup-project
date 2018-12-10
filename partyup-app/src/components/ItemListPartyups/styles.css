@@ -1,0 +1,18 @@
+.partyups__picture { width: 100%; height: 100%; min-width: 480px; min-height: 360px; max-width: 480px; max-height: 360px; }
+
+.partyups__info { padding: 15px; }
+
+.info__date { margin: 0; font-size: 0.6em; text-transform: uppercase; }
+
+.info__title { margin-top: 0; font-size: 1.3em; margin-bottom: 3px; }
+
+.info__description, .info__host { margin: 0; color: #999; font-size: 0.9em; }
+
+.partyups__event { cursor: pointer; overflow: hidden; margin-bottom: 20px; background-color: white; -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.14); box-shadow: 0 3px 20px rgba(0, 0, 0, 0.14); border-radius: 4px; }
+
+
+@media (min-width: 740px) { 
+    .partyups__picture { width: 100%; height: 100%; min-width: 280px; min-height: 280px; max-width: 280px; max-height: 280px; }
+    .partyups__info { min-width: 500; min-height: 102; max-width: 500; max-height: 102; }
+    .partyups__event { min-width: 500; min-height: 605; max-width: 500; max-height: 605; }
+}

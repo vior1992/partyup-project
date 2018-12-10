@@ -1,0 +1,26 @@
+.main__gifsection { background: url(../../Public/homeJudith.gif) no-repeat center center; background-size: cover; position: relative; height: 300px; }
+
+.main__container { color: white; height: 100%; display: flex; align-items: center; justify-content: center; }
+
+.main__titles { text-align: center; color: white; }
+
+.title__h2 { font-size: 2.5em; margin-bottom: 0.2em; }
+
+.title__h4 { font-size: 1.5em; margin-top: 0; margin-bottom: 10px; }
+
+.main__selectors { display: inherit; display: flex; align-items: center; justify-content: center; flex-direction: row; margin-bottom: 10px; }
+
+.search__button { color: white; background-color: #d20096; padding: 0 20px; font-size: 20px; border: 1px solid black; border-radius: 5px; line-height: 50px; max-height: 50px; min-width: 200px; outline: 0;}
+
+.partyups { display: -webkit-box; display: -ms-flexbox; display: flex;  -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+.partyups__titles { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-pack: distribute; justify-content: space-around; background-color: rgb(0,40,255, 0.4);}
+
+.partyups__container { display: flex; width: 100%; }
+
+.container__list { display: flex; align-items: center;  width: 100%; flex-direction: column; justify-content: space-around; padding: 2% 0%; }
+
+@media (min-width: 1080px) { 
+    .container__list { display: flex; flex-wrap: wrap; align-items: center;  width: 100%; flex-direction: row; justify-content: space-around; padding: 2% 50px; }
+    .partyups__picture { display:flex; flex-direction: row; width: 100%; height: 100%; min-width: 280px; min-height: 280px; max-width: 280px; max-height: 280px; }
+}

@@ -1,0 +1,7 @@
+.site__header { background: #0D1313; color: white; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.logo { text-decoration: none; color: white; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; padding: 10px; }
+
+.header__actions { margin-left: auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-right: 10px; }
+
+.login__link, .logup__link, .logout__link, .create__link, .profile__link { color: #d20096; font-size: 0.8rem; margin-left: 10px; text-transform: uppercase; }

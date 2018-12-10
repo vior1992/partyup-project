@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>PartyUp</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__items">
+            <a class="header__logo" href="./landing.html">logo</a>
+            
+            <div class="header__ancores">
+                <a href="create_partyup.html">Crear Partyup</a>
+                <a href="./profile.html">Perfil</a>
+                <a href="./landing.html">Cerrar sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="create__container">
+            <form class="create__formulary" action="">
+                <h4>¿Como se llamara tu PartyUp?</h4>
+                <input class="create__input" type="text">
+                <h4>Describelo un poco</h4>
+                <textarea class="create__textarea" placeholder="Donde ireis, que esperas de los asistentes, si hay que llevar algo..." name="" id="" cols="30" rows="10"></textarea>
+                <h4>Punto de encuentro</h4>
+                <input class="create__input" placeholder="Un bar, una plaza, una calle..." type="text">
+            </form> 
+            <div class="create__selects">
+                <h4>Ciudad</h4>
+                <select defaultValue="CHOOSE" name="city" id="" onChange="">
+                    <option value="CHOOSE">Elige una ciudad</option>
+                    <option value="1">Barcelona</option>
+                    <option value="2">Madrid</option>
+                    <option value="3">Bilbao</option>
+                    <option value="4">Valencia</option>
+                    <option value="5">Sevilla</option>
+                </select>
+    
+                <h4>Tag</h4>
+                <select defaultValue="CHOOSE" name="city" id="" onChange="">
+                    <option value="CHOOSE">Elige un tag</option>
+                    <option value="1">Pop</option>
+                    <option value="2">Jazz</option>
+                    <option value="3">Rock</option>
+                    <option value="4">Heavy</option>
+                    <option value="5">Indie</option>
+                    <option value="6">Reggae</option>
+                    <option value="7">Reggaeton</option>
+                    <option value="8">Blues</option>
+                    <option value="9">Soul</option>
+                    <option value="10">Electronica</option>
+                    <option value="11">Clasica</option>
+                    <option value="12">Desfase</option>
+                    <option value="13">De tranquis</option>
+                    <option value="14">Otros</option>
+                    <option value="15">Varios</option>
+                </select>
+            </div>
+            <button class="create__button">Crear Partyup</button>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2018 Partyup  Partyup es una subsidiaria totalmente controlada por Dani Companies Inc.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body { background: black; color: #435160; font-family: 'Open Sans', sans-serif; }
+
+.login__background { display: flex; background: url(./login.gif) no-repeat center center; background-size: cover; position: inherit; height: 300px; }
+
+.login__container { margin: -80% 10% -90% 10%; padding: 5% 10%; background: #f6f7f8a1; border: 1px solid black; border-radius: 10px }
+
+.login__titles { display: block; font-size: 20px; font-family: "Sofia", cursive; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; border-bottom: 2px solid black; }
+
+.login__ancor { color: #d20096 ; text-decoration: none; }
+
+.login__formulary { align-content: center; flex-direction: column; margin: 2%; }
+
+.formulary__titles { padding: 1%; }
+
+.formulary__input { font-size: 18px; color: #435160; width: 90%; height: 30px; border: 1px solid #43516075; background-color: white; border-radius: 5px; }
+
+.login__error { margin: 0% 20% 2% 20%; text-align: center; border: 1px solid #f43756; border-radius: 10px; background-color: #f2dede; color: #f43756; }
+
+.login__button { color: white; background-color: #d20096; padding: 0 20px; font-size: 20px; border: 1px solid black; border-radius: 5px; line-height: 40px }
+
+@media (min-width: 380px) { 
+    .login__container { margin: -40% 10% -90% 10%; }
+    .login__titles { font-size: 20px }
+}
+
+@media (min-width: 600px) { 
+    .login__container { margin: -24.5% 10% -90% 10%; }
+}
+
+@media (min-width: 900px) { 
+    .login__container { margin: -14.5% 10% -90% 10%; }
+    .login__titles { font-size: 30px }
+}
