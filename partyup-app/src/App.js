@@ -30,12 +30,8 @@ class App extends Component {
     this.setState({ error: null })
   }
 
-  handleUserLoggedId = (id) => {
-    const userLoggedId = id
-
-    this.setState({ userLoggedId })
-  }
-
+  handleUserLoggedId = (id) => this.setState({ userLoggedId: id })
+  
   handlePartyupClick = (id, actuallUserId) => {
     this.setState({ 
       partyupId: id, 
