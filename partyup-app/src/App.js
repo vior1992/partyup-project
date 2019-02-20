@@ -88,70 +88,68 @@ class App extends Component {
     }
   }
 
-  render() {        
+  render() {    
+        const headerNotLoggedProps = {
+          onRegisterClick: (event) => this.handlerRouter(event, 'register'),
+          onLoginClick: (event) => this.handlerRouter(event, 'login'),
+          onLogoClick: (event) => this.handlerRouter(event, 'home')
+        }    
+
+        const headerLoggedProps = {
+          onCreatePartyupClick: (event) => this.handlerRouter(event, 'create-partyup'),
+          onProfileClick: (event) => this.handlerRouter(event, 'profile'),
+          onLogoutClick: (event) => this.handlerRouter(event, '')
+        }    
+
         return <div>
           <Route exact path="/" render={() => 
             !logic.loggedIn ? <Landing 
-              onRegisterClick={(event) => this.handlerRouter(event, 'register')} 
-              onLoginClick={(event) => this.handlerRouter(event, 'login')} 
-              onLogoClick={(event) => this.handlerRouter(event, 'home')} 
-              onPartyupClickNotLogged={(event) => this.handlerRouter(event, 'login')}/>
+              onPartyupClickNotLogged={(event) => this.handlerRouter(event, 'login')}
+              {...headerNotLoggedProps}/>
             : <Redirect to="/home" />} 
           />
           <Route path="/home" render={() => 
             logic.loggedIn ? <Home 
               onUserLoggedId={this.handleUserLoggedId} 
-              onLogoClick={(event) => this.handlerRouter(event, 'home')} 
               onPartyupClick={this.handlePartyupClick} 
-              onCreatePartyupClick={(event) => this.handlerRouter(event, 'create-partyup')} 
-              onProfileClick={(event) => this.handlerRouter(event, 'profile')} 
-              onLogoutClick={(event) => this.handlerRouter(event, '')} />
+              onLogoClick={(event) => this.handlerRouter(event, 'home')} 
+              {...headerLoggedProps}/>
             : <Redirect to="/" />} 
           />
           <Route path="/register" render={() => 
             !logic.loggedIn ? <Register 
-              onRegister={this.handleRegister} 
-              onRegisterClick={(event) => this.handlerRouter(event, 'register')} 
-              onLoginClick={(event) => this.handlerRouter(event, 'login')} 
-              onLogoClick={(event) => this.handlerRouter(event, 'home')} 
-              error={this.state.error}/> 
+              onRegister={this.handleRegister}
+              error={this.state.error}
+              {...headerNotLoggedProps}/> 
             : <Redirect to="/home" />} 
           />
           <Route path="/login" render={() => 
             !logic.loggedIn ? <Login 
               onLogin={this.handleLogin} 
-              onRegisterClick={(event) => this.handlerRouter(event, 'register')} 
-              onLoginClick={(event) => this.handlerRouter(event, 'login')} 
-              onLogoClick={(event) => this.handlerRouter(event, 'home')} 
-              error={this.state.error}/> 
+              error={this.state.error}
+              {...headerNotLoggedProps}/> 
             : <Redirect to="/home" />}
           />
           <Route path="/create-partyup" render={() => 
             logic.loggedIn ? <CreatePartyup 
               onCreateClick={this.handleCreateClick} 
               onCreatePartyup={this.handleCreatePartyup} 
-              onCreatePartyupClick={(event) => this.handlerRouter(event, 'create-partyup')} 
-              onProfileClick={(event) => this.handlerRouter(event, 'profile')} 
-              onLogoutClick={(event) => this.handlerRouter(event, '')}
-              error={this.state.error}/> 
+              error={this.state.error}
+              {...headerLoggedProps}/> 
             : <Redirect to="/" />}
           />
           <Route exact path="/profile" render={() => 
             logic.loggedIn ? <Profile 
               onPartyupClick={this.handlePartyupClick} 
-              onCreatePartyupClick={(event) => this.handlerRouter(event, 'create-partyup')} 
-              onProfileClick={(event) => this.handlerRouter(event, 'profile')} 
-              onLogoutClick={(event) => this.handlerRouter(event, '')}
-              onDeleteClick={(event) => this.handlerRouter(event, '')} />
+              onDeleteClick={(event) => this.handlerRouter(event, '')}               
+              {...headerLoggedProps}/>
             : <Redirect to="/" />}
           />
           <Route path="/profile/public/:userId" render={props => 
             logic.loggedIn ? <PublicProfile 
               userId={props.match.params.userId} 
               onPartyupClick={this.handlePartyupClick} 
-              onCreatePartyupClick={(event) => this.handlerRouter(event, 'create-partyup')} 
-              onProfileClick={(event) => this.handlerRouter(event, 'profile')} 
-              onLogoutClick={(event) => this.handlerRouter(event, '')}/> 
+              {...headerLoggedProps}/> 
             : <Redirect to="/" />} 
           />
           <Route path="/user/:userLoggedId/partyup/:partyupId" render={props => 
@@ -160,9 +158,7 @@ class App extends Component {
               actuallUserId={props.match.params.userLoggedId} 
               onPublicProfileClick={this.handlePublicProfileClick} 
               onDeleteClick={(event) => this.handlerRouter(event, 'home')} 
-              onCreatePartyupClick={(event) => this.handlerRouter(event, 'create-partyup')} 
-              onProfileClick={(event) => this.handlerRouter(event, 'profile')} 
-              onLogoutClick={(event) => this.handlerRouter(event, '')} />
+              {...headerLoggedProps}/>
             : <Redirect to="/" />}
           />
         </div>
