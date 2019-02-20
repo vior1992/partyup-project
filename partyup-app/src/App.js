@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { Route, Redirect, withRouter } from 'react-router'
 import logic from './logic'
-import Landing from './components/Landing'
-import Register from './components/Register'
-import Login from './components/Login'
-import Home from './components/Home'
-import CreatePartyup from './components/CreatePartyup'
-import Profile from './components/Profile'
-import PublicProfile from './components/PublicProfile'
-import PartyupEvent from './components/PartyupEvent'
+import { 
+  Landing, 
+  Register, 
+  Login, 
+  Home, 
+  CreatePartyup, 
+  Profile, 
+  PublicProfile, 
+  PartyupEvent 
+} from './components'
 
 logic.url = process.env.REACT_APP_API_URL
 
@@ -30,7 +32,7 @@ class App extends Component {
     this.setState({ error: null })
   }
 
-  handleUserLoggedId = (id) => this.setState({ userLoggedId: id })
+  handleUserLoggedId = id => this.setState({ userLoggedId: id })
   
   handlePartyupClick = (id, actuallUserId) => {
     this.setState({ 
@@ -42,7 +44,7 @@ class App extends Component {
     this.props.history.push(`/user/${this.state.userLoggedId}/partyup/${id}`)  
   }
 
-  handlePublicProfileClick = (userId) => {
+  handlePublicProfileClick = userId => {
     this.props.history.push(`/profile/public/${userId}`)
 
     this.setState({ error: null })
